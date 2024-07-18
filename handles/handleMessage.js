@@ -6,7 +6,7 @@ const AVAILABLE_COMMANDS = [
   "neth — talk to NethAI",
   "wiegine — talk to WiegineAI"];
 
-function handleMessage(event, pageAccessToken) {
+async function handleMessage(event, pageAccessToken) {
   const senderId = event.sender.id;
   const messageText = event.message.text.toLowerCase();
 
