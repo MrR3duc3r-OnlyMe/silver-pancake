@@ -6,14 +6,16 @@ const fs = require('fs');
 
 const app = express();
 app.use(bodyParser.json());
-
+app.get("/", (req,res)=>{
+  return res.send("neth");
+})
 // Set the verify token and page access token
 const VERIFY_TOKEN = 'pagebot';
 // Read the token from the file
-const PAGE_ACCESS_TOKEN = fs.readFileSync('token.txt', 'utf8');
+const PAGE_ACCESS_TOKEN = ``;
 
 // Verify that the verify token matches
-app.get('/webhook', (req, res) => {
+app.get('/webhook', async(req, res) => {
   const mode = req.query['hub.mode'];
   const token = req.query['hub.verify_token'];
   const challenge = req.query['hub.challenge'];
@@ -29,7 +31,7 @@ app.get('/webhook', (req, res) => {
 });
 
 // Handle messages and postbacks
-app.post('/webhook', (req, res) => {
+app.post('/webhook', async(req, res) => {
   const body = req.body;
 
   if (body.object === 'page') {
