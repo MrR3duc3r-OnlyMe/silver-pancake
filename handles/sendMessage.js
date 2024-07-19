@@ -4,7 +4,7 @@ async function sendMessage(senderId, message, pageAccessToken) {
   await axios.get('https://graph.facebook.com/v13.0/me/messages', {
     recipient: { id: senderId },
     message: message,
-    params: { access_token: pageAccessToken }
+    access_token: pageAccessToken
   }, {});
 }
 
