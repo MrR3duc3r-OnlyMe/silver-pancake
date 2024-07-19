@@ -12,7 +12,7 @@ app.get("/", (req,res)=>{
 // Set the verify token and page access token
 const VERIFY_TOKEN = 'pagebot';
 // Read the token from the file
-const PAGE_ACCESS_TOKEN = `EAAZAAbKfrePcBO80MARQ6IPW7ZA2ZAY5xRoyCoLqk4tHJwT4ewLFDFszxK9A7mRMxekfiZBZAAt3nZAMFlAvZAOvaQ3Eg17eGZCxdUTkkg8xi5Qas6ECMyenE1pWYCTDVLh90e3ZAXmw6IewMyLVSRXHwPivY39MynRcZAWbDVuIeR8rNZBHylfIhrCVUBsCVLgrsZARowZDZD`;
+const PAGE_ACCESS_TOKEN = `EAAZAAbKfrePcBOxL0Qy8ZA7kVTyjEqfGsZCKClSrCEngcE3LyIX6mkCbFZBzycLEIAestfpl62V8h9OcaNsqfSAXs0Uc22mvSLD8q0oBcXbA9qO7B1RlHK81eJAriZAsCOKvYwzBGAZC9d4KZAFITb3ZA6EQH2YD88Gs6dWUIdwMwJsa76vWaVlWg8RGmlkFEzl5hgZDZD`;
 
 // Verify that the verify token matches
 app.get('/webhook', async(req, res) => {
